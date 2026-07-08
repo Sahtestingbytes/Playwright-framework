@@ -14,6 +14,17 @@ await loginPage.goto();
 await loginPage.login(testUsers.validUser.username, testUsers.validUser.password);
 
 await dashboardPage.verifyDashboardLoaded();
-
-
 });
+
+test("Invalid Login", async ({ page }) => {
+
+   const loginPage = new LoginPage(page);
+const dashboardPage = new DashboardPage(page);
+
+await loginPage.goto();
+await loginPage.login(testUsers.InvalidUser.username, testUsers.InvalidUser.password);
+
+await dashboardPage.verifyDashboardLoaded();
+});
+
+
