@@ -4,7 +4,7 @@ import { DashboardPage } from '../../pages/DashboardPage';
 import user from '../../test-data/user.json';
 
 export const testUsers = user;
-test('Verify successful login', async ({page})=>{
+test('Verify successful login @smoke', async ({page})=>{
 
 
 const loginPage = new LoginPage(page);
@@ -16,7 +16,7 @@ await loginPage.login(testUsers.validUser.username, testUsers.validUser.password
 await dashboardPage.verifyDashboardLoaded();
 });
 
-test("Invalid Login", async ({ page }) => {
+test("Invalid Login @regression", async ({ page }) => {
 
    const loginPage = new LoginPage(page);
 const dashboardPage = new DashboardPage(page);
