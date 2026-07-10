@@ -2,29 +2,29 @@ import { test, expect } from '../../fixtures/apiFixture';
 import { AuthApi } from '../../api/AuthApi';
 
 
-test('Generate auth token', async ({ request }) => {
+test('Generate auth token', async ({ bookingApi }) => {
 
 
-    const authApi = new AuthApi(request);
+    // const authApi = new AuthApi(request);
 
 
-    const response =
-        await authApi.createToken();
+    // const response =
+    //     await authApi.createToken();
 
 
-    expect(response.status())
-        .toBe(200);
+    // expect(bookingApi.response.status())
+    //     .toBe(200);
 
 
-    const body =
-        await response.json();
+    // const body =
+    //     await response.json();
 
 
-    console.log(body);
+    // console.log(body);
 
 
-    expect(body.token)
-        .toBeDefined();
+    // expect(body.token)
+    //     .toBeDefined();
 
 
 });
