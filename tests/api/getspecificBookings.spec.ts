@@ -1,5 +1,5 @@
 import { test, expect } from '../../fixtures/apiFixture';
-import { config } from '../../config/config';
+
 
 test('Get booking by id', async ({ bookingApi }) => {
 

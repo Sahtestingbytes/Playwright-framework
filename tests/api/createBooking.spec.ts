@@ -1,6 +1,5 @@
 import { test, expect } from '../../fixtures/apiFixture';
 import bookingData from "../../test-data/booking.json";
-import { AuthApi } from '../../api/AuthApi';
 
 
 test('create bookings', async ({ bookingApi }) => {
